@@ -1,0 +1,10 @@
+{
+  "crons": [
+    { "path": "/api/cron/sync-fixtures", "schedule": "0 4 * * *" },
+    { "path": "/api/cron/sync-standings", "schedule": "0 5 * * *" },
+    { "path": "/api/cron/sync-trends", "schedule": "0 6 * * *" }
+  ],
+  "rewrites": [
+    { "source": "/.well-known/ai-plugin.json", "destination": "/api/ai-plugin" }
+  ]
+}

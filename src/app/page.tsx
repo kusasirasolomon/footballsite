@@ -1,15 +1,26 @@
-import Link from 'next/link';
+import HeroSection from '@/components/home/HeroSection';
+import MatchCard from '@/components/match/MatchCard';
 
 export default function HomePage() {
+  const exampleMatch = {
+    matchId: 'example-1',
+    slug: 'example-vs-opponent',
+    competition: 'FIFA World Cup',
+    stage: 'Group A',
+    status: 'SCHEDULED',
+    kickoffUtc: new Date().toISOString(),
+    homeTeam: { id: 'home-1', name: 'Example', shortName: 'EX', crestUrl: null },
+    awayTeam: { id: 'away-1', name: 'Opponent', shortName: 'OPP', crestUrl: null },
+    score: { home: null, away: null }
+  };
+
   return (
     <section>
-      <h1 className="text-3xl font-bold mb-4">LiveScore.site</h1>
-      <p className="text-slate-600 mb-6">Near-live World Cup scores, standings, and match recaps. Auto-refresh during live matches.</p>
+      <HeroSection />
 
-      <div className="space-y-4">
-        <Link href="/world-cup" className="block p-4 border rounded hover:bg-slate-50">World Cup hub</Link>
-        <Link href="/world-cup/trending" className="block p-4 border rounded hover:bg-slate-50">Trending teams & players</Link>
-        <Link href="/match/example-vs-opponent" className="block p-4 border rounded hover:bg-slate-50">Example match page</Link>
+      <h2 className="mt-8 text-xl font-semibold">Upcoming</h2>
+      <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <MatchCard match={exampleMatch} />
       </div>
     </section>
   );
