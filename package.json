@@ -1,0 +1,23 @@
+{
+  "name": "footballsite",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "15.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "firebase": "^10.16.0",
+    "firebase-admin": "^11.11.0",
+    "zod": "^4.22.0",
+    "tailwindcss": "^4.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}
